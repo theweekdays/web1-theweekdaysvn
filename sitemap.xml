@@ -1,42 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
-        <loc>/about-us.html</loc>
-    </url>
-    <url>
-        <loc>/collection.html</loc>
-    </url>
-    <url>
-        <loc>/contacts.html</loc>
-    </url>
-    <url>
-        <loc>/forgotpassword.html</loc>
-    </url>
-    <url>
-        <loc>/</loc>
-    </url>
-    <url>
-        <loc>/login.html</loc>
-    </url>
-    <url>
-        <loc>/product.html</loc>
-    </url>
-    <url>
-        <loc>/products.html</loc>
-    </url>
-    <url>
-        <loc>/profile.html</loc>
-    </url>
-    <url>
-        <loc>/sale.html</loc>
-    </url>
-    <url>
-        <loc>/shopping-cart.html</loc>
-    </url>
-    <url>
-        <loc>/signup.html</loc>
-    </url>
-    <url>
-        <loc>/wishlist.html</loc>
-    </url>
+<url>
+<loc>https://theweekdays.live/</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/index.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/sale.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/about-us.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/contacts.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/shopping-cart.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/wishlist.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/profile.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=701607937</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1351423147</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1532750833</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1605546310</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1441135160</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1796679442</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1446789517</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/products.html?category=1819250023</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/profile.html?changeinfo=1</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/login.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://theweekdays.live/signup.html</loc>
+<lastmod>2022-12-13T18:16:18+00:00</lastmod>
+<priority>0.51</priority>
+</url>
 </urlset>
