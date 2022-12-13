@@ -38,6 +38,37 @@
 </head>
 
 <body>
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "694381864030835");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <nav class="navbar navbar-light navbar-expand-md sticky-top d-xxl-flex align-self-start justify-content-xxl-center navbar-shrink py-3" id="mainNav" style="max-width: 100%;height: 75px;width: 100%;">
         <div class="container"><a class="navbar-brand d-flex align-content-start align-self-start order-first" href="/"><span class="align-content-start"><a href="index.html"><img src="assets/img/logonenden%20(1).png" style="width: 40px;"></a><a href="index.html" style="margin-left: 20px;color: #3e3e40;">the weekdays</a></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
