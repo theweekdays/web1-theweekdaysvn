@@ -1,54 +1,52 @@
-{
-    "userdata": [
-        {
-            "userId": 1,
-            "username": "andv20411",
-            "password": "123456789",
-            "firstname": "An",
-            "lastname": "Đinh Văn",
-            "email": "andv20411@st.uel.edu.vn",
-            "phone": "0909123451",
-            "dob": "05/08/2000"
-        },
-        {
-            "userId": 2,
-            "username": "haodh20411",
-            "password": "123456789",
-            "firstname": "Hảo",
-            "lastname": "Đinh Hoàn",
-            "email": "haodh20411@st.uel.edu.vn",
-            "phone": "0909123452",
-            "dob": "01/01/2002"
-        },
-        {
-            "userId": 3,
-            "username": "hungng20411",
-            "password": "123456789",
-            "firstname": "Hưng",
-            "lastname": "Nguyễn Gia",
-            "email": "hungng20411@st.uel.edu.vn",
-            "phone": "0909123453",
-            "dob": "01/01/2002"
-        },
-        {
-            "userId": 4,
-            "username": "phuongpnh20411",
-            "password": "123456789",
-            "firstname": "Phương",
-            "lastname": "Phạm Nguyễn Hiền", 
-            "email": "phuongpnh20411@st.uel.edu.vn",
-            "phone": "0909123454",
-            "dob": "01/01/2002"
-        },
-        {
-            "userId": 5,
-            "username": "hailt19408",
-            "password": "123456789",
-            "firstname": "Hải",
-            "lastname": "Lê Thanh",
-            "email": "hailt19408@st.uel.edu.vn",
-            "phone": "0909123455",
-            "dob": "01/01/2001"
-        }
-    ]
-}
+[
+    {
+        "userId": 1,
+        "username": "andv20411",
+        "password": "123456789",
+        "firstname": "An",
+        "lastname": "Đinh Văn",
+        "email": "andv20411@st.uel.edu.vn",
+        "phone": "0909123451",
+        "dob": "05/08/2000"
+    },
+    {
+        "userId": 2,
+        "username": "haodh20411",
+        "password": "123456789",
+        "firstname": "Hảo",
+        "lastname": "Đinh Hoàn",
+        "email": "haodh20411@st.uel.edu.vn",
+        "phone": "0909123452",
+        "dob": "01/01/2002"
+    },
+    {
+        "userId": 3,
+        "username": "hungng20411",
+        "password": "123456789",
+        "firstname": "Hưng",
+        "lastname": "Nguyễn Gia",
+        "email": "hungng20411@st.uel.edu.vn",
+        "phone": "0909123453",
+        "dob": "01/01/2002"
+    },
+    {
+        "userId": 4,
+        "username": "phuongpnh20411",
+        "password": "123456789",
+        "firstname": "Phương",
+        "lastname": "Phạm Nguyễn Hiền", 
+        "email": "phuongpnh20411@st.uel.edu.vn",
+        "phone": "0909123454",
+        "dob": "01/01/2002"
+    },
+    {
+        "userId": 5,
+        "username": "hailt19408",
+        "password": "123456789",
+        "firstname": "Hải",
+        "lastname": "Lê Thanh",
+        "email": "hailt19408@st.uel.edu.vn",
+        "phone": "0909123455",
+        "dob": "01/01/2001"
+    }
+]
