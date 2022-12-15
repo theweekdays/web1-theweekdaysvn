@@ -119,21 +119,30 @@
                     <div class="dropdown"><button
                             class="btn btn-primary btn-sm active dropdown-toggle bg-dark border rounded-0"
                             aria-expanded="false" data-bs-toggle="dropdown" type="button"
-                            style="color: rgb(255,255,255);">Sắp xếp&nbsp;</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Giá</a><a class="dropdown-item"
-                                href="#">Tên sản phẩm</a><a class="dropdown-item" href="#">Mới nhất</a></div>
+                            style="color: rgb(255,255,255);">Sắp xếp</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="shortProductList('price-asc')">Giá</a><a class="dropdown-item"
+                                onclick="shortProductList('name-asc')">Tên sản phẩm</a><a class="dropdown-item" onclick="shortProductList('default')">Mới nhất</a></div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col col-md-3"><strong>Danh mục</strong>
+                <div id="Category-List" class="col col-md-3"><strong>Danh mục</strong>
                     <hr>
                     <div data-reflow-type="category-list" data-reflow-layout="unstyled"
                         data-reflow-category-link="products.html?category={id}"></div>
                 </div>
                 <div class="col col-md-9">
-                    <div data-reflow-type="product-list" data-reflow-addtocart-text="Thêm vào giỏ"
+                    <!-- Sắp xếp mặc định - Sản phẩm mới nhất -->
+                    <div id="product-list-default" class="" data-reflow-type="product-list" data-reflow-addtocart-text="Thêm vào giỏ"
                         data-reflow-layout="cards" data-reflow-order="date_desc"
+                        data-reflow-product-link="/product.html?product={id}"></div>
+                    <!-- Sắp xếp giá tăng dần -->
+                    <div id="product-list-price-asc" class="visually-hidden" data-reflow-type="product-list" data-reflow-addtocart-text="Thêm vào giỏ"
+                        data-reflow-layout="cards" data-reflow-order="price_asc"
+                        data-reflow-product-link="/product.html?product={id}"></div>
+                    <!-- Sắp xếp tên sản phẩm -->
+                    <div id="product-list-name-asc" class="visually-hidden" data-reflow-type="product-list" data-reflow-addtocart-text="Thêm vào giỏ"
+                        data-reflow-layout="cards" data-reflow-order="name_asc"
                         data-reflow-product-link="/product.html?product={id}"></div>
                 </div>
             </div>
@@ -228,6 +237,7 @@
     <script src="assets/js/Lightbox-Gallery.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/sort-product-list.js"></script>
 </body>
 
 </html>
