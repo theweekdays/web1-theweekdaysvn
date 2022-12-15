@@ -148,7 +148,9 @@ function saveChangeProfileInfo(){
     user.lastname = lastname;
     user.firstname = firstname;
     user.email = email;
-    user.password = password;
+    if(password != ""){
+        user.password = password;
+    }
     //add new user to userStorage
     dataStorage.push(user);
     localStorage.setItem('userStorage', JSON.stringify(dataStorage));
