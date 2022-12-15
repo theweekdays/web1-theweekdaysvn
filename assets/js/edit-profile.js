@@ -18,7 +18,10 @@ class User{
     }
 }
 
-window.onload = loadProfileInfo();
+//check if window title is "Profile - The Weekdays" or "Wishlist - The Weekdays" then loadProfileInfo()
+if (document.title == "Profile - The Weekdays" || document.title == "Wishlist - The Weekdays"){
+    window.onload = loadProfileInfo();
+}
 
 function showProfileInfo(){
     document.getElementsByClassName(hidden_profile_div)[0].setAttribute('class', visible_profile_div);
@@ -28,7 +31,20 @@ function logOut(){
     localStorage.removeItem('profile');
 }
 
+function initUserStorage(){
+    //Load user data from json file
+    if (localStorage.getItem('userStorage') == null){
+        fetch('assets/data/user.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('userStorage', JSON.stringify(data));
+            });
+    }
+}
+
 function loadProfileInfo(){
+    initUserStorage();
+    //Load profile info
     let notLoggedInMessage = "Vui lòng đăng nhập";
     if (localStorage.getItem('profile') == null){
         document.getElementById('profile-fullname').innerHTML = "<a href='login.html'>" + notLoggedInMessage + "</a>";
@@ -49,22 +65,55 @@ function loadProfileInfo(){
 }
 
 function logIn(){
+    initUserStorage();
     var username = document.getElementById('input-username').value;
     var password = document.getElementById('input-password').value;
-    fetch('assets/data/user.json')
-        .then(response => response.json())
-        .then(data => {
-            for (let i = 0; i < data.length; i++){
-                if ((data[i].email == username || data[i].phone == username) && data[i].password == password){
-                    var user = new User(data[i].userId, data[i].username, data[i].password, data[i].firstname, data[i].lastname, data[i].email, data[i].phone, data[i].dob);
-                    localStorage.setItem('profile', JSON.stringify(user));
-                    window.location.href = "index.html";
-                    return;
-                }
-            }
-            alert('Sai tên đăng nhập hoặc mật khẩu');
-            document.getElementById('input-username').setAttribute('value', '');
+    //load user data from json array in localStorage with key 'userStorage'
+    var data = JSON.parse(localStorage.getItem('userStorage'));
+    for (let i = 0; i < data.length; i++){
+        if ((data[i].email == username || data[i].phone == username) && data[i].password == password){
+            var user = new User(data[i].userId, data[i].username, data[i].password, data[i].firstname, data[i].lastname, data[i].email, data[i].phone, data[i].dob);
+            localStorage.setItem('profile', JSON.stringify(user));
+            window.location.href = "index.html";
+            return;
+        }
+    }
+    alert('Sai tên đăng nhập hoặc mật khẩu');
+    document.getElementById('input-username').setAttribute('value', '');
+    document.getElementById('input-password').setAttribute('value', '');
+    document.getElementById('input-username').focus();
+}
+
+function signUp(){
+    initUserStorage();
+    var firstname = document.getElementById('input-fullname').value;
+    var password = document.getElementById('input-password').value;
+    var confirmPassword = document.getElementById('input-confirm-password').value;
+    var email = document.getElementById('input-email').value;
+    var phone = "0909123454";
+    var dob = "01/01/2000";
+    if (password != confirmPassword){
+        alert('Mật khẩu không khớp');
+        document.getElementById('input-password').setAttribute('value', '');
+        document.getElementById('input-confirm-password').setAttribute('value', '');
+        document.getElementById('input-password').focus();
+        return;
+    }
+    var data = JSON.parse(localStorage.getItem('userStorage'));
+    for (let i = 0; i < data.length; i++){
+        if (data[i].email == email){
+            alert('Email đã được đăng ký');
+            document.getElementById('input-email').setAttribute('value', '');
             document.getElementById('input-password').setAttribute('value', '');
-            document.getElementById('input-username').focus();
-        });
+            document.getElementById('input-confirm-password').setAttribute('value', '');
+            document.getElementById('input-email').focus();
+            return;
+        }
+    }
+
+    var user = new User(1, email, password, firstname, "", email, phone, dob);
+    data.push(user);
+    localStorage.setItem('userStorage', JSON.stringify(data));
+    alert('Đăng ký thành công');
+    window.location.href = "login.html";
 }
