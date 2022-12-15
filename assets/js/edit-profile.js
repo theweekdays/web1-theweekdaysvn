@@ -159,3 +159,19 @@ function saveChangeProfileInfo(){
     alert('Lưu thành công');
     window.location.href = "profile.html";
 }
+
+function forgotPassword(){
+    initUserStorage();
+    var email = document.getElementById('input-email').value;
+    var data = JSON.parse(localStorage.getItem('userStorage'));
+    for (let i = 0; i < data.length; i++){
+        if (data[i].email == email){
+            alert('Kiểm tra email' + email + ' để lấy lại mật khẩu!');
+            window.location.href = "login.html";
+            return;
+        }
+    }
+    alert('Email không tồn tại');
+    document.getElementById('input-email').setAttribute('value', "");
+    document.getElementById('input-email').focus();
+}
