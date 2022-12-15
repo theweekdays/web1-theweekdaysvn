@@ -107,13 +107,13 @@
             <div class="col-sm-5 col-md-6 col-xl-7 col-xxl-2"
                 style="width: auto;padding-right: 0px;min-width: 40%;padding-left: 15px;">
                 <h3><strong>Tên tài khoản</strong></h3>
-                <p>Phạm Nguyễn Lê Đinh</p>
+                <p id="profile-fullname">Phạm Nguyễn Lê Đinh</p>
                 <h3><strong>Sinh nhật</strong></h3>
-                <p style="margin-bottom: 10px;">08/11/1994</p>
+                <p id="profile-dob" style="margin-bottom: 10px;">08/11/1994</p>
             </div>
             <div class="col-xxl-5" style="padding-left: 20px;width: auto;min-width: 30%;">
                 <h3><strong>Email</strong></h3>
-                <p>phamnguyenledinh@gmail.com</p>
+                <p id="profile-email">phamnguyenledinh@gmail.com</p>
             </div>
         </div>
         <section>
@@ -125,10 +125,10 @@
                             style="width: auto;min-width: 280px;padding-right: 0px;padding-left: 20px;max-width: 100%;">
                             <h3><strong>Tài khoản</strong></h3>
                             <ul>
-                                <li><a href="profile.html?changeinfo=1" style="color: black;">Chỉnh sửa hồ sơ</a></li>
-                                <li><a href="profile.html" style="color: black;">Thay đổi mật khẩu</a></li>
+                                <li><a href="profile.html?changeinfo=1" style="color: black;" onclick="showProfileInfo()">Chỉnh sửa hồ sơ</a></li>
+                                <li><a href="profile.html" style="color: black;" onclick="showProfileInfo()">Thay đổi mật khẩu</a></li>
                                 <li><a href="wishlist.html" style="color: black;">Sản phẩm yêu thích</a></li>
-                                <li><a href="login.html" style="color: red;">Đăng xuất</a></li>
+                                <li><a href="login.html" style="color: red;" onclick="logOut()">Đăng xuất</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-8 col-xxl-7"
@@ -256,6 +256,7 @@
     <script src="assets/js/Lightbox-Gallery.js"></script>
     <script src="assets/js/Profile-Edit-Form.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/edit-profile.js"></script>
 </body>
 
 </html>
