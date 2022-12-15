@@ -50,7 +50,12 @@ function loadProfileInfo(){
         document.getElementById('profile-fullname').innerHTML = "<a href='login.html'>" + notLoggedInMessage + "</a>";
         document.getElementById('profile-email').innerHTML = notLoggedInMessage;
         document.getElementById('profile-dob').innerHTML = notLoggedInMessage;
-        document.getElementsByClassName('row d-flex d-sm-flex flex-row justify-content-start align-items-start flex-sm-row justify-content-sm-start align-items-sm-center flex-md-row justify-content-md-center align-items-md-start flex-lg-row justify-content-lg-center flex-xl-row justify-content-xl-center flex-xxl-row justify-content-xxl-center align-items-xxl-start')[0].setAttribute('class', 'row d-flex d-sm-flex flex-row justify-content-start align-items-start flex-sm-row justify-content-sm-start align-items-sm-center flex-md-row justify-content-md-center align-items-md-start flex-lg-row justify-content-lg-center flex-xl-row justify-content-xl-center flex-xxl-row justify-content-xxl-center align-items-xxl-start visually-hidden');
+        if (document.title == "Profile - The Weekdays"){
+            document.getElementsByClassName('row d-flex d-sm-flex flex-row justify-content-start align-items-start flex-sm-row justify-content-sm-start align-items-sm-center flex-md-row justify-content-md-center align-items-md-start flex-lg-row justify-content-lg-center flex-xl-row justify-content-xl-center flex-xxl-row justify-content-xxl-center align-items-xxl-start')[0].setAttribute('class', 'row d-flex d-sm-flex flex-row justify-content-start align-items-start flex-sm-row justify-content-sm-start align-items-sm-center flex-md-row justify-content-md-center align-items-md-start flex-lg-row justify-content-lg-center flex-xl-row justify-content-xl-center flex-xxl-row justify-content-xxl-center align-items-xxl-start visually-hidden');
+        }
+        else if(document.title == "Wishlist - The Weekdays"){
+            document.getElementById('wishlist-section').setAttribute('class', 'visually-hidden');
+        }
     }
     else{
         var data = JSON.parse(localStorage.getItem('profile'));
