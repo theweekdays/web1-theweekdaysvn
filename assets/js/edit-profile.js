@@ -117,3 +117,43 @@ function signUp(){
     alert('Đăng ký thành công');
     window.location.href = "login.html";
 }
+
+function saveChangeProfileInfo(){
+    //load old user object from profile
+    var data = JSON.parse(localStorage.getItem('profile'));
+    var user = new User(data.userId, data.username, data.password, data.firstname, data.lastname, data.email, data.phone, data.dob);
+    //get new user info
+    var lastname = document.getElementById('input-lastname').value;
+    var firstname = document.getElementById('input-firstname').value;
+    var email = document.getElementById('input-email').value;
+    var password = document.getElementById('input-password').value;
+    var confirmPassword = document.getElementById('input-confirm-password').value;
+    //check if password and confirm password are the same
+    if (password != confirmPassword){
+        alert('Mật khẩu không khớp');
+        document.getElementById('input-password').setAttribute('value', '');
+        document.getElementById('input-confirm-password').setAttribute('value', '');
+        document.getElementById('input-password').focus();
+        return;
+    }
+    //delete old user in userStorage
+    var dataStorage = JSON.parse(localStorage.getItem('userStorage'));
+    for (let i = 0; i < dataStorage.length; i++){
+        if (dataStorage[i].email == user.email){
+            dataStorage.splice(i, 1);
+            break;
+        }
+    }
+    //update info of user
+    user.lastname = lastname;
+    user.firstname = firstname;
+    user.email = email;
+    user.password = password;
+    //add new user to userStorage
+    dataStorage.push(user);
+    localStorage.setItem('userStorage', JSON.stringify(dataStorage));
+    //save new user to profile
+    localStorage.setItem('profile', JSON.stringify(user));
+    alert('Lưu thành công');
+    window.location.href = "profile.html";
+}
