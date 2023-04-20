@@ -1,5 +1,12 @@
 # TheWeekdays.live
 The Weekdays - Daily Outfit For Boy
 <hr>
-Contributor
-<img src="https://github.com/theweekdaysvn/theweekdaysvn.github.io/graphs/contributors">
+Founder:
+
+- Le Thanh Hai
+- Dinh Van An
+- Dinh Hoan Hao
+- Pham Nguyen Hien Phuong
+- Nguyen Gia Hung
+
+Contact us: https://theweekdaysvn.github.io/about-us.html#founder
